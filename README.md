@@ -11,7 +11,7 @@ I built this portfolio with Next.js, TypeScript, and Three.js to share my work i
 - [FlightDeck X](https://github.com/santiagomunoz15/flightdeck-x): I built a real-time rocket simulation and mission-control system with a C++ simulator, binary telemetry, a TypeScript relay, and a React dashboard. I also modeled, rigged, and animated its vehicle in Blender.
 - [EarthLens](https://github.com/santiagomunoz15/EarthLens): I built a satellite-imagery explorer that uses NASA GIBS snapshots to compare locations across time.
 
-I based the case studies on my project implementations and documentation, and I included demo GIFs from both repositories.
+I based the case studies on my project implementations and documentation. I converted the original project GIFs to compressed H.264 videos, which load only when a visitor chooses to play a demo. The initial page loads lightweight poster images instead.
 
 For the portfolio's 3D preview, I use a separate browser replay with synthetic data and my Blender vehicle model. I show altitude, mission time, and speed calculated from that synthetic trajectory. I do not run the C++ simulator inside this preview.
 
