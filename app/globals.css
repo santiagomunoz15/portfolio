@@ -11,3 +11,38 @@
 .contact-section h2 em{color:#666}
 .primary{background:#f5f5f5;color:#111}
 .primary:hover{background:#d9d9d9}
+
+/* Formula SAE: documentary photography and individual contributions. */
+.racing-section{padding:90px 5.2% 0;scroll-margin-top:30px}
+.racing-heading{align-items:end;margin-bottom:32px}
+.racing-heading .text-link{padding-bottom:6px;color:#c5c5c5;white-space:nowrap}
+.racing-lead-photo{margin:0;border:1px solid var(--line);background:#151515}
+.racing-lead-photo img{display:block;width:100%;height:auto;max-height:620px;object-fit:cover;object-position:center 56%;aspect-ratio:2/1;filter:grayscale(1)}
+.racing-lead-photo figcaption{padding:16px 20px;display:flex;justify-content:space-between;gap:15px;font:9px var(--mono);letter-spacing:.7px;color:#a8a8a8}
+.racing-lead-photo figcaption>span:first-child{display:flex;align-items:center;gap:8px;color:#ddd}
+.racing-story{display:grid;grid-template-columns:1fr 1fr;gap:10%;padding:40px 0 32px;scroll-margin-top:30px}
+.racing-intro .eyebrow{font-size:8px;line-height:1.8;letter-spacing:.6px}
+.racing-intro h3{font-size:36px;line-height:1.15;letter-spacing:-1.2px;margin:18px 0}
+.racing-intro>p{font-size:13px;line-height:1.9;color:#a4a4a4;max-width:480px}
+.racing-intro .tags{margin-top:22px}
+.racing-contributions>div{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.racing-contributions>div:first-child{border-top:1px solid var(--line)}
+.racing-step{font:10px var(--mono);color:#888;padding-top:3px}
+.racing-contributions h4{font-size:14px;font-weight:500;margin:0 0 9px}
+.racing-contributions p{font-size:12px;line-height:1.8;color:var(--muted);margin:0;max-width:390px}
+.racing-pipeline{display:flex;justify-content:space-between;gap:22px;align-items:center;padding:22px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.racing-pipeline .eyebrow{font-size:8px;white-space:nowrap}
+.racing-pipeline>div{display:flex;align-items:center;gap:20px;font:9px var(--mono);color:#ccc}
+.racing-pipeline svg{color:#707070;flex-shrink:0}
+.racing-gallery{display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px;padding-top:30px}
+.racing-gallery figure{margin:0;min-width:0}
+.racing-gallery img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;display:block;filter:grayscale(1);border:1px solid var(--line)}
+.racing-gallery figure:last-child img{object-position:center 70%}
+.racing-gallery figcaption{padding-top:14px}
+.racing-gallery figcaption>span{font:8px var(--mono);letter-spacing:.7px;color:#ccc}
+.racing-gallery figcaption p{font-size:11px;color:var(--muted);line-height:1.7;margin:6px 0 0}
+@media(max-width:1050px){.racing-pipeline{align-items:flex-start;flex-direction:column}.racing-pipeline>div{gap:16px}.racing-story{gap:6%}}
+@media(max-width:760px){.racing-section{padding:55px 6% 0}.racing-heading .text-link{margin-top:20px}.racing-lead-photo img{aspect-ratio:4/3;object-position:center}.racing-lead-photo figcaption{padding:12px;font-size:7px;flex-wrap:wrap;gap:9px}.racing-story{grid-template-columns:1fr;gap:28px;padding-top:28px}.racing-intro h3{font-size:32px}.racing-contributions p{font-size:13px}.racing-pipeline>div{width:100%;display:grid;grid-template-columns:1fr auto 1fr;gap:15px;font-size:9px}.racing-pipeline>div svg:nth-of-type(2){display:none}.racing-gallery{grid-template-columns:1fr;gap:26px}.racing-gallery img{max-height:310px}.racing-gallery figcaption>span{font-size:9px}.racing-gallery figcaption p{font-size:12px}}
+/* Let the WebGL panel shrink when an existing desktop tab is resized. */
+.hero-copy,.hero-lab{min-width:0}
+@media(max-width:760px){.hero{grid-template-columns:minmax(0,1fr)}}
