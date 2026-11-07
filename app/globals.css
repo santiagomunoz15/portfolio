@@ -50,3 +50,50 @@
 /* Keep small labels readable without crowding narrow panels. */
 .lab-top,.project-image-top{flex-wrap:wrap}
 .hero-bottom{flex-wrap:wrap}
+
+/* Quiet Grid atmosphere, with the personal 89 mark as a closing signature. */
+.viewport{background:radial-gradient(ellipse at 50% 82%,#ffffff08,transparent 72%),#121212}
+.footer-signature{display:inline-flex;align-items:center;gap:12px;color:#777}
+.footer-signature img{display:block;width:30px;height:29px;opacity:.7;transition:opacity .2s}
+.footer-signature:hover img{opacity:1}
+.footer-signature:hover{color:#ccc}
+@media(max-width:760px){.footer-signature{gap:9px}.footer-signature img{width:25px;height:24px}}
+
+/* Muted ice-blue accents: a quiet nod to the Grid. */
+:root{--accent:#a7cbd2}
+h1 span{color:var(--text)}
+.viewport{background:radial-gradient(ellipse at 50% 82%,#82b7c00a,transparent 72%),#121212}
+.viewport canvas{filter:none}
+.lab{border-color:#344348}
+.lab-top{border-bottom-color:#2a3538}
+.demo-label{color:#a1bbc0;border-color:#3d5359}
+.lab-stats .healthy{color:#a7cbd2}
+.status-dot{background:#a7cbd2}
+.availability{color:#a7cbd2}
+.play-button{background:#b5cfd4;color:#101719}
+.lab-controls input{accent-color:#a7cbd2}
+.project-title a{border-color:#344348;color:#b2ccd1}
+.project-title a:hover{background:#1c2a2e}
+.primary:hover{background:#dce8ea}
+a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,select:focus-visible{outline-color:#a7cbd2}
+.contact-section .status-dot{background:#555}
+
+/* Carry the ice-blue accent through the technical typography. */
+.site-header{border-bottom-color:var(--accent)}
+.eyebrow,.hero-bottom,.lab-top,.demo-label,.viewport-top,.coordinates,.axis-label,
+.lab-stats span,.lab-stats strong,.lab-stats small,.lab-stats .healthy,.lab-stats .warning,
+.chart-caption,.lab-controls select,.fault,.fault.active,.discipline-strip>span,
+.project-image-top,.project-image-bottom,.tags span,.project-numbers span,
+.case-study summary span,.experience-row>span,footer>span,.project-media button,
+.racing-lead-photo figcaption,.racing-lead-photo figcaption>span:first-child,
+.racing-step,.racing-pipeline>div,.racing-gallery figcaption>span,
+.contact-section .eyebrow{color:var(--accent)}
+.contact-section .eyebrow{background:#121719;padding:7px 9px;width:fit-content}
+.contact-section .eyebrow .status-dot{background:var(--accent)}
+
+/* A restrained lift for the closing contact arrow. */
+.contact-arrow{transition:color .25s ease,border-color .25s ease,background-color .25s ease}
+.contact-arrow svg{transition:transform .25s ease}
+.contact-arrow:hover,.contact-arrow:focus-visible{color:var(--accent);border-color:var(--accent);background:#121719}
+.contact-arrow:hover svg,.contact-arrow:focus-visible svg{transform:translate(3px,-3px)}
+@media(prefers-reduced-motion:reduce){.contact-arrow:hover svg,.contact-arrow:focus-visible svg{transform:none}}

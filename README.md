@@ -2,25 +2,7 @@
 
 I built this portfolio with Next.js, TypeScript, and Three.js to share my work in real-time systems, simulation, and data visualization. It features my Formula SAE telemetry work with Osprey Racing, FlightDeck X, and EarthLens, along with my experience, resume, and contact information.
 
-## Running locally
-
-I install the dependencies and start the development server with:
-
-```sh
-npm install
-npm run dev
-```
-
-## Checking and building
-
-I check the TypeScript types and create a production build with:
-
-```sh
-npm run typecheck
-npm run build
-```
-
-I export the site to `out/` so I can deploy it to a static host without runtime secrets or backend services.
+[View my portfolio](https://santiagomunoz15.github.io/portfolio/)
 
 ## Featured work
 
