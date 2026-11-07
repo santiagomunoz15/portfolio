@@ -1,49 +1,67 @@
 # Santiago Muñoz — Engineering Portfolio
 
-Next.js, TypeScript, and Three.js portfolio featuring FlightDeck X and EarthLens.
+I built this portfolio with Next.js, TypeScript, and Three.js to share my work in real-time systems, simulation, and data visualization. It features FlightDeck X and EarthLens, along with my experience, resume, and contact information.
 
-## Run
+## Running locally
+
+I install the dependencies and start the development server with:
 
 ```sh
 npm install
 npm run dev
 ```
 
-## Verify and build
+## Checking and building
+
+I check the TypeScript types and create a production build with:
 
 ```sh
 npm run typecheck
 npm run build
 ```
 
-The site exports to `out/` and can be hosted on any static host. No runtime secrets or backend services are required.
+I export the site to `out/` so I can deploy it to a static host without runtime secrets or backend services.
 
-## Content and provenance
+## Featured projects
 
-Project descriptions are based on the author-provided résumé and the public FlightDeck X and EarthLens repositories. The project GIFs are copied from those repositories. The 3D preview is a separate, illustrative browser replay using synthetic data, not the actual C++ simulator. Its sensor-noise toggle affects only the displayed measurement, preserving the reference trajectory.
+- [FlightDeck X](https://github.com/santiagomunoz15/flightdeck-x): I built a real-time rocket simulation and mission-control system with a C++ simulator, binary telemetry, a TypeScript relay, and a React dashboard. I also modeled, rigged, and animated its vehicle in Blender.
+- [EarthLens](https://github.com/santiagomunoz15/EarthLens): I built a satellite-imagery explorer that uses NASA GIBS snapshots to compare locations across time.
 
-Project links:
-- https://github.com/santiagomunoz15/flightdeck-x
-- https://github.com/santiagomunoz15/EarthLens
+I based the case studies on my project implementations and documentation, and I included demo GIFs from both repositories.
 
-Résumé: `public/resume.pdf`. Contact and experience content: `app/page.tsx`. Styles: `app/globals.css`. Interactive preview: `components/TelemetryLab.tsx`.
+For the portfolio's 3D preview, I use a separate browser replay with synthetic data and my Blender vehicle model. I keep the sensor-noise toggle limited to the displayed measurement so the reference trajectory stays unchanged. I do not run the C++ simulator inside this preview.
+
+## Project structure
+
+I keep the main content and assets in these files:
+
+| File | What I keep there |
+| --- | --- |
+| `app/page.tsx` | My project case studies, experience, and contact information |
+| `app/globals.css` | My layout, visual styles, and responsive rules |
+| `components/TelemetryLab.tsx` | My interactive 3D flight preview and replay controls |
+| `components/ProjectMedia.tsx` | My project screenshots and on-demand demo animations |
+| `lib/assets.ts` | My asset-path helper for repository-prefixed deployments |
+| `public/resume.pdf` | My downloadable resume |
+| `.github/workflows/deploy-pages.yml` | My GitHub Pages build and deployment workflow |
 
 ## GitHub Pages
 
-Recommended repository name: **santiagomunoz15.github.io**. This gives the clean URL `https://santiagomunoz15.github.io/` without buying a domain. A different repository name also works: the workflow uses GitHub's Pages metadata to set the correct repository prefix for scripts, images, the résumé, and the 3D model.
+I configured this repository for GitHub Pages at **https://santiagomunoz15.github.io/portfolio/**. My workflow uses GitHub's Pages metadata to set the repository prefix for scripts, images, my resume, and the 3D model.
 
-1. Create a public GitHub repository (leave it empty initially).
-2. Upload the contents of this project directory, including `.github/workflows/deploy-pages.yml`, `package.json`, and `package-lock.json`. Put the files at the repository root, rather than inside a `santiago-portfolio` folder. Do not upload `node_modules`, `.next`, or `out`.
-3. Under **Settings → Pages → Build and deployment → Source**, select **GitHub Actions**.
-4. Push to `main` or `master`, or run **Deploy portfolio to GitHub Pages** manually from the Actions tab after enabling Pages.
-5. Open the URL shown by the successful deployment.
+My deployment setup is:
 
-The existing `.openai/hosting.json` belongs to the earlier private Sites preview and is not needed by GitHub Pages. The GitHub workflow uses only `out/`.
+1. I keep the project files at the repository root, including the workflow, `package.json`, and `package-lock.json`. I exclude `node_modules`, `.next`, and `out` from version control.
+2. I select **GitHub Actions** under **Settings → Pages → Build and deployment → Source**.
+3. I push to `main` or `master` to trigger the deployment. I can also run **Deploy portfolio to GitHub Pages** manually from the Actions tab.
+4. I check the deployment result in GitHub Actions for the published URL.
 
-To verify a repository-prefixed export locally:
+I retain `.openai/hosting.json` from my earlier private Sites preview. My GitHub Pages workflow does not use it; it publishes the contents of `out/`.
+
+I verify the repository-prefixed export locally with:
 
 ```sh
 NEXT_PUBLIC_BASE_PATH=/portfolio npm run build
 ```
 
-For the recommended username repository or ordinary local development, leave `NEXT_PUBLIC_BASE_PATH` unset.
+For ordinary local development, I leave `NEXT_PUBLIC_BASE_PATH` unset.
