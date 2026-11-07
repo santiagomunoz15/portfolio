@@ -13,7 +13,7 @@ I built this portfolio with Next.js, TypeScript, and Three.js to share my work i
 
 I based the case studies on my project implementations and documentation, and I included demo GIFs from both repositories.
 
-For the portfolio's 3D preview, I use a separate browser replay with synthetic data and my Blender vehicle model. I keep the sensor-noise toggle limited to the displayed measurement so the reference trajectory stays unchanged. I do not run the C++ simulator inside this preview.
+For the portfolio's 3D preview, I use a separate browser replay with synthetic data and my Blender vehicle model. I show altitude, mission time, and speed calculated from that synthetic trajectory. I do not run the C++ simulator inside this preview.
 
 ## Project structure
 

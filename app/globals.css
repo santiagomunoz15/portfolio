@@ -97,3 +97,15 @@ a:focus-visible,button:focus-visible,summary:focus-visible,input:focus-visible,s
 .contact-arrow:hover,.contact-arrow:focus-visible{color:var(--accent);border-color:var(--accent);background:#121719}
 .contact-arrow:hover svg,.contact-arrow:focus-visible svg{transform:translate(3px,-3px)}
 @media(prefers-reduced-motion:reduce){.contact-arrow:hover svg,.contact-arrow:focus-visible svg{transform:none}}
+
+/* A face beside the story, with experience collected beneath it. */
+.about-section{column-gap:10%;row-gap:38px;align-items:start}
+.about-portrait{margin:20px 0 0;width:100%;max-width:400px;justify-self:end;border:1px solid #344348;background:#121212}
+.about-portrait img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:center 30%;filter:grayscale(1)}
+.about-portrait figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:9px;padding:15px;font:10px/1.6 var(--mono);letter-spacing:.5px;color:var(--accent)}
+.about-section .experience{grid-column:1/-1;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:25px;padding-top:0;border-top:1px solid var(--line)}
+.about-section .experience-row{display:flex;flex-direction:column;gap:12px;padding:22px 0;border:0}
+.about-section .experience-row>span{padding-top:0}
+.about-section .experience small{line-height:1.7}
+@media(max-width:1050px){.about-section .experience{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.about-section{row-gap:30px}.about-portrait{margin-top:0;max-width:400px;justify-self:start}.about-section .experience{grid-template-columns:1fr;gap:0}.about-section .experience-row{display:grid;grid-template-columns:110px 1fr;gap:15px;border-bottom:1px solid var(--line)}.about-section .experience-row>span{padding-top:4px}}
